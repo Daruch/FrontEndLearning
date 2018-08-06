@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		.bordered{
+			border:3px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+        
+		document.onclick = function(e){
+			console.log(e.target.tagName);
+			if(e.target.tagName === "IMG"){
+				event.target.classList.add("bordered");
+			}
+		}	
+		
+	</script> 
+	<img src = "images/portfolio.jpg">
+	<img src = "images/portfolio.jpg">
+</body>
+</html>
