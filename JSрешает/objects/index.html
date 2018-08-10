@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj = {
+			js:['jQuery', 'Angular'],
+			php: 'hello', css: 'world'
+		}
+
+		console.log(obj.js[0]) //obj['js'][0]
+
+
+		var arr = {
+			'ru':['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+			'en':['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'],
+		};
+		alert(arr['ru'][0]);
+		alert(arr['en'][2]);
+		var lang = 'ru';
+		var day = 3;
+		alert(arr[lang][day]);
+
+	//Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет значение 'ru', то в переменную arr запишем массив дней недели на русском языке, а если имеет значение 'en' – то на английском. Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch. 
+//if
+	var lang = 'en';
+		if (lang == 'ru') {
+		var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+		}
+		if (lang == 'en') {
+		arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+		}	
+	alert(arr);
+
+//switch case	
+	var lang = "ru"
+	 switch(lang){
+	  case "ru":
+		var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+		break;
+	  case "eng":
+        var arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+        break;
+	 }
+ 	console.log(arr);
+
+ //array
+  	var lang = "ru";
+  	var obj= {
+  		"ru":['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'],
+  		"eng":['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn']
+  }
+  	console.log(obj[lang]);
+	</script>
+
+</body>
+</html>
