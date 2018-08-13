@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LogicalOperators</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var c = false || 5;
+        console.log(c);//5
+        var c = 5 || false; // c = 5
+        var c = 5 || 4; //в c запишется 5
+        var c = 4 || 5; //в c запишется 4
+
+
+
+    //Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false. 
+      function Func(a,b){
+      	return a == b;
+      }
+
+    //Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть функция вернет true, а если нет - false. 
+
+    function Func(a,b){
+        return a+b > 10;
+    }
+
+   //Сделайте функцию, которая параметром принимает число и проверяет - отрицательное оно или нет. Если отрицательное - пусть функция вернет true, а если нет - false
+
+   function Func(num){
+   	 return num < 0; 
+   }
+	</script>
+
+</body>
+</html>

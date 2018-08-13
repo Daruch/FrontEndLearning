@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BuiltInFunc</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		 //Lesson 9		
+		 //Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения
+
+		 var str = "hello";
+		 var up = str.charAt(0).toUpperCase() + str.substr(1); 
+		 console.log(up);
+
+		 //Дано число, например, 3751. Отсортируйте цифры в нем (сделайте из него 1357) не используя цикл.
+
+        var num = '3751';
+        var spl = num.split('');
+        spl.sort();
+
+        //Проверьте, что строка начинается на http://.
+         var str = 'http://';
+         if(str.substr(0, 7) === 'http://'){
+         	console.log("Yes);
+         }else{
+         	console.log("No");
+         }
+
+        // Проверьте, что строка заканчивается на .html.
+        var str = 'index.html';
+        if(str.substr(-5)==='.html'){
+        	console.log("Yes");
+        }else{
+        	console.log("No");
+
+        }
+
+	</script>
+
+</body>
+</html>

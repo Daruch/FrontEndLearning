@@ -7,6 +7,42 @@
 	<script>
     /*tasks are taken from here http://theory.phphtml.net/tasks/javascript/base/rabota-s-ciklami-for-i-while-v-javascript.html
     and here  http://javascript.kiev.ua/cycles  */
+
+    //Выведите на экран таблицу умножения (как в школьной тетради).
+
+
+ //С помощью цикла for сформируйте строку '123456789' и запишите ее в переменную str. Показать решение.
+
+   var str = '';
+    for (var i = 1; i < 10; i++) {
+    str += i;
+  }
+     alert(str);
+
+ //С помощью цикла for сформируйте строку '987654321' и запишите ее в переменную str. Показать решение.
+
+  var str = '';
+    for (var i = 9; i > 0; i--) {
+    str += i;
+}
+  alert(str);
+
+ //С помощью цикла for сформируйте строку '-1-2-3-4-5-6-7-8-9-' и запишите ее в переменную str. Показать решение.
+
+
+  var str = '-';
+    for (var i = 1; i < 10; i++) {
+     str += i + '-';
+}
+    alert(str);
+
+ //Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+
+    var str = "";
+    for(var i = 0; i<20;i++){
+      str+="xx";
+      console.log(str);
+}
 	
 	// заполнить попущенные значения [3,12]
        var arr = [3, 12];
