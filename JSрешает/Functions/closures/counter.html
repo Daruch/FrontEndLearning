@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+</head>
+<body>
+
+   <button >0</button>
+   <button >0</button>
+   <button >0</button>
+	
+	<script type="text/javascript">
+		// button with separate counter using closures and Self invoked functions
+      var buttons = document.getElementsByTagName('button');
+       for(var i = 0; i<buttons.length; i++){
+       	    buttons[i].onclick = (function(){
+       	    	var count = 0;
+       	    	return function(){
+                    count++;
+                    this.innerHTML = count;
+       	    	}
+       	    })();
+       }       
+	</script>
+
+</body>
+</html>

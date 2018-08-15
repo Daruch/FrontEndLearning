@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EventObj</title>
+</head>
+<body>
+	<style type="text/css">
+		#elem {
+			border: 1px solid black;
+			width: 200px;
+			height: 200px;
+}
+	</style>
+
+	<button id="elem">Элемент</button>
+
+
+	<script type="text/javascript">
+		var el = document.getElementById('elem').addEventListener('mousemove', go(event){
+            this.innerHTML = {X:event.clientX, Y:event.clientY};
+		});
+	</script>
+
+</body>
+</html>

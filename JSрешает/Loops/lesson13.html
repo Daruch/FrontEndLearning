@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//выведем на экран строку '111222333444555666777888999'
+
+		for (var i = 1; i <= 9; i++) {
+			for (var j = 1; j <= 3; j++) {
+		document.write(i); //выводит '111', потом '222', потом '333' и так далее
+			}
+		}
+
+		//сделать строку, заполненную десятью иксами 'x'.
+        var str = " ";
+		for(var i = 0; i<10; i++){
+            str+= "x";
+		}
+
+		//пирамида иксами
+		var str = '';
+		for(var i = 0; i<10; i++){
+           str+="x";
+           console.log(str);
+		}
+
+		//пирамида с циклами
+        	 for (var i = 1; i <= 9; i++) {
+				for (var j = 1; j <= 3; j++) {
+					document.write(i);
+				}
+						document.write('<br>'); 
+}
+
+     //another pyramid
+
+     for (var i = 1; i <= 9; i++) {
+	    for (var j = 1; j <= i; j++) {
+		 document.write(i);
+	}
+    	document.write('<br>');
+      }
+     }
+
+	</script>
+
+</body>
+</html>

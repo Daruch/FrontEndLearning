@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closures</title>
+</head>
+<body>
+	<button>1</button>
+	<button>1</button>
+	<button>1</button>
+
+
+
+	<p>Hey</p>
+	<p>You</p>
+	<p>There</p>
+
+  
+	<script type="text/javascript">
+      
+      //Closures
+
+      //Сделайте функцию, которая считает и выводит количество своих вызовов. func(); //выведет 1func(); //выведет 2  
+      function func(){
+      	var i = 1;
+      	return function(){
+      		return i++;
+      	}
+      }
+
+      var counter = func;
+
+    
+      //simple counter 
+		function createCounter(){
+			var num = 0;
+			  return function func(){
+                 num++;
+                 return num;
+			 }
+		}
+
+		var counter = createCounter();
+		var counter = createCounter();// separate counter 
+
+
+    //	Если переменная a больше нуля - то в ggg запишем функцию, которая выводит один !, иначе запишем функцию, которая выводит два !. 
+    var a = -4;
+    var ggg;
+      if(a > 0){
+      	  ggg = function s(){
+      		return ('!');
+      	}}else{
+          ggg = function d(){
+      			return ("!!");
+      		}
+      }
+	//Функция ggg принимает 2 параметра: число и анонимную функцию, которая возводит число в квадрат. Возведите число в 4-тую степень с помощью ggg. 
+	function ggg(num, func){
+		return function func(){
+			return Math.pow(num, 4);
+		}
+	}
+	//Функция ggg принимает 2 параметра: анонимную функцию, которая возвращает 3 и анонимную функцию, которая возвращает 4. Верните результатом функции ggg сумму 3 и 4.
+	 
+	 function ggg(a,b){
+        return a() + b();
+	 }
+      var f1 = function(){return 3};
+      var f2 = function(){return 4};
+      console.log(ggg(f1, f2));
+
+	 
+
+	 function ggg(func1, func2){
+         var func1 = function(){
+         	return 4;
+         }
+         var func2 = function(){
+         	return 4;
+         }
+         return (func1() + func2());
+	 }
+
+	 //Дана функция ggg. Она требует первым параметром число, вторым функцию, которая возводит в квадрат, а третьим параметром функцию, которая возводит в куб. Эти функции есть как Function Declaration - kvadrat, kub. Пусть функция ggg вернет сумму квадрата и куба числа. 
+
+        function ggg1(a, b, c){
+        	return (b(a) + c(a));
+        }
+
+        var square = function(n){
+             return Math.pow(n, 2);
+        }
+
+        var coube = function(n){
+            return Math.pow(n, 3)
+        }
+
+        //Сделайте функцию each, которая первым параметром принимает массив, а вторым - функцию, которая применится к каждому элементу массива. Функция each должна вернуть измененный массив. 
+       
+
+	</script>
+
+</body>
+</html>

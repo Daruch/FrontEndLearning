@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+<body>
+
+  <input type="text" name="field" id ="1" >
+  <input type="text" name="field" id ="2">
+  <input type = "button" onclick = "square()" value = "Press me">
+
+
+  <input type = "button" onclick="counter()" value = 0 id = "4">
+
+	<script type="text/javascript">
+     //По нажатию на кнопку в нижнем инпуте появится квадрат числа из верхнего инпута. 
+		function square(el){
+			var value = document.getElementById("1").value;
+			var res= document.getElementById("2");
+			res.value = value * value;
+	    }
+
+	  //simple counter
+	  
+
+	 
+	</script>
+
+</body>
+</html>

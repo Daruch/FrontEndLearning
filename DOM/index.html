@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+
+
+
+<input type="text"  value = "This is type button" id  = "3">
+<input type = "button"  value = "Press me to hide" onclick = "hide()">
+<input type = "button"  value = "Press me to show" onclick = "show()">
+
+
+<input type="text"  value = "This is type button">
+<input type = "button" id  = "2" value = "Press me to disable" onclick = "pressMe()">
+
+
+<input type = "text" value = "Ой поменял свой текст" id = "1">
+<input type="button" value = "Press me" onclick = "changeEverything()" >
+
+<input id = "test" type = "text" class = "aaa" value = "!" onmousedown="press()">
+<input id = "button" type = "button" value = "Hello" onclick = "changeText(this)">
+
+<input type="submit" onclick="func(this)" id="test1" value="input1">
+<input type="submit" onclick="func(this)" id="test2" value="input2">
+<input type="submit" onclick="func(this)" id="test3" value="input3">
+<body>
+	<script type="text/javascript">
+  
+  //press button to chnage text and disable
+		function pressMe(el){
+           var el = document.getElementById('2');
+           el.value = "I'm disabled now";
+           el.disabled = true;
+		}
+
+
+		function press(){
+			var elem = document.getElementById("test")
+			console.log(elem.value);
+			console.log(elem.type);
+			console.log(elem.id);
+			elem.value = "Yep yep";//change value
+			console.log(elem.value);
+			console.log(elem.className);
+			elem.className = "blueone";	
+		}
+       //elem  value
+		function func(elem){
+          console.log(elem.value);
+		}
+
+		//change button text
+		function changeText(el){
+             el.value = "Buy";
+		}
+
+     //change parameters oncklick
+		function changeEverything(){
+          var el = document.getElementById('1');
+          el.style.color = "red";
+          el.style.width = "200px";
+          el.style.height = "100px";
+          el.style.borderRadius = "10px";    
+        }	
+
+     //hide elemen onclick
+
+         function hide(el){
+         	var el = document.getElementById('3');
+         	el.style.display = 'none';
+         }
+
+         function show(el){
+         	var el = document.getElementById('3');
+         	el.style.display = 'inline-block';
+         }
+	</script>
+
+
+</body>
+</html>
