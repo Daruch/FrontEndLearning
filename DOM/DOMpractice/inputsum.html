@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find sum of three inputs</title>
+</head>
+<body>
+
+
+<input class="cls" type="text" value="" placeholder="число">
+<input class="cls" type="text" value="" placeholder="число">
+<input class="cls" type="text" value="" placeholder="число">
+<button id="task">жми</button>
+<input id="sum" type="text" value="">   
+
+	<script type="text/javascript">
+		
+       var elem = document.getElementById('task');
+		elem.addEventListener('click', func);
+		var elem1 = document.getElementsByClassName('cls');
+
+		function func() {
+			var sum = 0;
+			for (var i = 0; i < elem1.length; i++) {
+				sum += +elem1[i].value;
+		}
+		var newElem = document.getElementById('sum');
+		newElem.value = sum;
+}    
+       
+
+	</script>
+
+</body>
+</html>

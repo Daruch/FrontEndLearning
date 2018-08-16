@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events</title>
+</head>
+<body>
+
+<input type="submit" value="1">
+<input type="submit" value="2">
+<input type="submit" value="3">
+<input type="submit" value="4">
+<input type="submit" value="5">
+
+
+<input type="submit" id="test">
+
+
+<img src="img/1.jpg">
+<img src="img/2.jpg">
+<img src="img/3.jpg">
+
+
+<script type="text/javascript">
+
+	//show img attribute
+
+     var elems = document.getElementsByTagName('img');
+		for (var i = 0; i < elems.length; i++) {
+			elems[i].onclick = func;
+		}
+
+ 	function func() {
+		alert(this.getAttribute('src'));
+	}
+
+
+	// show the value of the clicked element
+	var elems = document.getElementsByTagName('input');
+		for (var i = 0; i < elems.length; i++) {
+			elems[i].onclick = func;
+	}
+
+	function func() {
+		alert(this.value); //изменение только здесь
+	}
+
+  var elem = document.getElementById('test');
+  elem.addEventListener("click", func1);
+  elem.addEventListener("click", func2);
+  elem.addEventListener('click', func3);
+
+
+
+  elem.removeEventListener('click', func1);
+  elem.removeEventListener('click', func2);
+
+
+  function func1(){
+  	console.log("1");
+  }
+
+
+  function func2(){
+  	console.log("2");
+  }
+
+
+  function func3(){
+  	console.log("3");
+  }
+
+</script>
+
+</body>
+</html>

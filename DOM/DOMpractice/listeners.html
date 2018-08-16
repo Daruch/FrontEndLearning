@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listeners</title>
+</head>
+<body>
+
+	<a href = "#" title="">First</a>
+	<a href = "#" title="">Second</a>
+	<a href = "#" title="">Third</a>
+
+	<script type="text/javascript">
+		//Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст. 
+
+		var links= document.getElementsByTagName('href');
+		 for(var i = 0; i<links.length; i++){
+		 	elems[i].addEventListener('mouseover', func);
+		 }
+
+		 function func(){
+		 	this.title += this.innerHTML;
+		 }
+
+	//Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках. Показать решение.
+
+	//Дополните предыдущую задачу: после первого наведению на ссылку следует отвязать от нее событие, которое добавляет href в конец текста. Показать решение.
+
+	//Привяжите всем инпутам следующее событие - по потери фокуса каждый инпут выводит свое value в абзац с id="test". Показать решение.
+	</script>
+
+</body>
+</html>
