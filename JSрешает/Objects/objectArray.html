@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array methods</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		//filter
+		var words = ['spray', "lemon", "list", 'look"];
+		var longWords = words.filter(word => word.length === 6);
+
+		//map  
+		var arr = [2, 4, 9];
+		var roots= arr.map(Math.sqrt);
+		console.log(arr);
+		console.log(roots);
+
+       //reduce
+
+       [1,2,3,4,5].reduce(function(acc, currentValue, currentIndex, array){
+       	  return acc + currentValue;
+       },0);//15
+
+	</script>
+
+</body>
+</html>

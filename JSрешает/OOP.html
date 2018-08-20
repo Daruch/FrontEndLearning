@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OOP</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		class User{
+          constructor(name, surname){
+          	this._name = name;
+          	this._surname = surname;
+          }
+
+
+		setAge(age){
+			if(this._checkAge(age)){
+                this._age = age;
+			}
+         }
+
+
+		getAge(){
+			return this._age;
+		}	
+
+        getName(){
+               return this._name;    //getter           
+          }
+
+
+         _checkAge(age){
+            if(age>0 && age<100){
+                return true;
+			}else{
+                return false;
+			}
+         } 
+
+         getSurname(){
+          	 return this._surname; //getter
+          }
+
+		 getFullName(){
+				return this._name + ' ' +this._surname;
+			}
+		}
+		var user = new User("Sam", "Peterson" );
+	    user.setAge(28);
+	    console.log(user.getAge());
+		console.log(user.getFullName());
+		console.log(user.getName());
+
+
+
+		//	Реализуйте класс Worker (Работник), который будет иметь следующие свойства: name (имя), surname (фамилия), rate (ставка за день работы), days (количество отработанных дней). Также класс должен иметь метод getSalary(), который будет выводить зарплату работника. Зарплата - это произведение (умножение) ставки rate на количество отработанных дней days. 
+		//Модифицируйте класс Worker из предыдущей задачи следующим образом: для свойства rate и для свойства days сделайте еще и методы-сеттеры
+
+		class Worker{
+			constructor(name, surname, rate, days){
+				this.name = name;
+				this.surname = surname;
+				this._rate = rate;
+				this._days = days;
+			}
+
+            setRate(rate){
+                 this._rate = rate;
+            }
+
+            getRate(){
+                return this._rate;
+            }
+
+            setDays(days){
+                 this._days = days;
+            }
+
+            getDays(){
+                return this._days;
+            }
+
+
+			getSalary(){
+				return this.rate * this.days;
+			}
+
+		}
+
+
+		var worker1 =  new Worker("Pet", "Sunders", 10, 22);
+		var worker2 =  new Worker("Zel", "Kuster", 10, 30);
+
+		console.log(worker1.name); 
+		console.log(worker1.surname); 
+		console.log(worker1.rate); 
+		console.log(worker1.days); 
+		console.log(worker1.getSalary()); 
+
+     //	Реализуйте класс MyString, который будет иметь следующие методы: метод reverse(), который параметром принимает строку, а возвращает ее в перевернутом виде, метод ucFirst(), который параметром принимает строку, а возвращает эту же строку, сделав ее первую букву заглавной и метод ucWords, который принимает строку и делает заглавной первую букву каждого слова этой строки.
+
+      
+	</script>
+
+</body>
+</html>
